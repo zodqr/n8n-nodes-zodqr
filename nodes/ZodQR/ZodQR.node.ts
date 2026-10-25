@@ -2,17 +2,17 @@ import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from '
 import { userDescription } from './resources/user';
 import { companyDescription } from './resources/company';
 
-export class Zodqr implements INodeType {
+export class ZodQR implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Zodqr',
+		displayName: 'ZodQR',
 		name: 'zodqr',
-		icon: { light: 'file:zodqr.svg', dark: 'file:zodqr.dark.svg' },
+		icon: 'file:zodqr.svg' as const,
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Interact with the Zodqr API',
+		description: 'Interact with the ZodQR API',
 		defaults: {
-			name: 'Zodqr',
+			name: 'ZodQR',
 		},
 		usableAsTool: true,
 		inputs: [NodeConnectionTypes.Main],

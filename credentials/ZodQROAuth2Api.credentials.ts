@@ -1,11 +1,13 @@
 import type { ICredentialType, INodeProperties } from 'n8n-workflow';
 
-export class ZodqrOAuth2Api implements ICredentialType {
+export class ZodQROAuth2Api implements ICredentialType {
+	icon = 'file:zodqr.svg' as const;
+
 	name = 'zodqrOAuth2Api';
 
 	extends = ['oAuth2Api'];
 
-	displayName = 'Zodqr OAuth2 API';
+	displayName = 'ZodQR OAuth2 API';
 
 	// Link to your community node's README
 	documentationUrl = 'https://github.com/org/-zodqr?tab=readme-ov-file#credentials';
@@ -21,13 +23,13 @@ export class ZodqrOAuth2Api implements ICredentialType {
 			displayName: 'Authorization URL',
 			name: 'authUrl',
 			type: 'hidden',
-			default: 'https://api.example.com/oauth/authorize',
+			default: 'https://zodqr.huongphamx.dev/oauth/authorize',
 		},
 		{
 			displayName: 'Access Token URL',
 			name: 'accessTokenUrl',
 			type: 'hidden',
-			default: 'https://api.example.com/oauth/token',
+			default: 'https://zodqr-api.huongphamx.dev/v1/oauth/token',
 		},
 		{
 			displayName: 'Auth URI Query Parameters',
